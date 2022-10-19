@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vantage Tech Mentorship Solutons By Kendra Bestmann</title>
+</head>
+
+<!--@kendrabestmann (QUESTION 1 AND QUESTION 3 ARE ANSWERED HERE)-->
+
+<body>
+    <header>
+        <h1>@Kendra Danagogo Bestmann</h1>
+    </header>
+
+    <main>
+    <div class="wrapper">
+        <div class="container">
+            <div class="input-div">
+                 <input type="number" id="inputNumber" placeholder="INPUT A NUMBER...">
+                 <button id="checkButton" onclick="checkStatus()">SUBMIT</button>
+            </div>
+             <p id="result"></p>
+        </div>
+    </div>
+
+    <style>
+        *,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+        body{
+    background-color: #ddd;
+    }
+
+       .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 30px;
+    }
+
+       .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 30px;
+    }
+
+       @media (max-width:400px) {
+         .input-div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+            }
+    }
+
+       p{
+    padding-top: 35px;
+    font: 700 1.3rem  Arial, sans-serif;
+    }
+
+       input{
+    outline: none;
+    border: none;
+    padding: 3px;
+    }
+
+       button{
+    padding: 3px 10px;
+    margin: 5px;
+    outline: none;
+    border: 1px solid grey;
+    }
+
+       button:hover{
+    scale: 1.1;
+    background-color: green;
+    color: #fff;
+    }
+
+       button:active{
+    scale: 0.9;
+    background-color: rgb(0, 61, 0);
+    color: #fff;
+    }
+    </style>
+
+    <script>
+//Declaring my variables
+let checkButton = document.getElementById('checkButton');
+var result = document.getElementById('result');
+
+//ODD AND EVEN NUMBER CONDITIONS PLUS EXTRA *wink*...
+checkButton.addEventListener('click', (e) =>{
+    inputNumber = parseInt(document.getElementById("inputNumber").value);
+    if(inputNumber) {
+        if(inputNumber%2==0 && inputNumber > 20)
+        result.innerHTML = "NOT WEIRD(THIS IS AN EVEN NUMBER)!!";
+        if (inputNumber%2==0 && inputNumber <= 20)
+        result.innerHTML = "This is an even number but it is less than 20.";
+        if(inputNumber%2!==0)
+        result.innerHTML = "WEIRD!!(THIS IS AN ODD NUMBER)";
+    }
+}); 
+    </script>
+
+    <!--ANSWER TO QUESTION 3 IS; option 1. An algorithm is a well-defined set of instructions to solve a particular problem.-->
+    </main>
+</body>
+</html>
