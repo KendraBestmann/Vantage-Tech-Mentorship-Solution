@@ -103,9 +103,11 @@ checkButton.addEventListener('click', (e) =>{
     inputNumber = parseInt(document.getElementById("inputNumber").value);
     if(inputNumber) {
         if(inputNumber%2==0 && inputNumber > 20)
-        result.innerHTML = "NOT WEIRD(THIS IS AN EVEN NUMBER)!!";
+        result.innerHTML = "NOT WEIRD!!(THIS IS AN EVEN NUMBER)";
         if (inputNumber%2==0 && inputNumber <= 20)
         result.innerHTML = "This is an even number but it is less than 20.";
+        if (inputNumber%2==0 && inputNumber === 20)
+        result.innerHTML = "This is an even number.";
         if(inputNumber%2!==0)
         result.innerHTML = "WEIRD!!(THIS IS AN ODD NUMBER)";
     }
