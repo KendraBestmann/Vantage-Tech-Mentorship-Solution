@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vantage Tech Mentorship Solutons By Kendra Bestmann</title>
+</head>
+
+<!--@kendrabestmann (QUESTION 2 SOLUTION)-->
+
+<body>
+    <header>
+        <h1>@Kendra Danagogo Bestmann</h1>
+        <p>QUESTION 2 SOLUTION</p>
+    </header>
+
+    <main>
+    <div class="wrapper">
+        <div class="main-container">
+            <div class="input-div">
+                <input type="text" placeholder="Type item here..." value="" id="inputField">
+                <button id="addButton" onclick="addItem()">Add item +</button>
+            </div>
+            <div class="added-items">
+                <ul id="unOrderedList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        *,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+    body{
+        background-color: rgb(86, 99, 112);
+    }
+
+    header{
+        padding: 10px 30px;
+        text-align: center;
+    }
+
+    h1, p{
+    padding-top: 35px;
+    font: 700 1.3rem  Arial, sans-serif;
+    color: #fff;
+    }
+
+    .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 30px;
+    }
+
+    .main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 30px;
+    }
+
+    .list-items{
+     color: #fff;
+     font: 700 1.3rem cursive, sans-serif;
+    }
+
+    input{
+        border: none;
+        outline: none;
+        padding: 3px 10px;
+    }
+
+    button{
+        padding: 3px 10px;
+        border: 1px solid gray;
+        outline: none;
+        margin: 10px;
+    }
+    
+    button:hover{
+    scale: 1.1;
+    background-color: green;
+    color: #fff;
+    }
+
+       button:active{
+    scale: 0.9;
+    background-color: rgb(0, 61, 0);
+    color: #fff;
+    }
+
+    .added-items{
+        margin-top: 45px;
+    }
+
+    @media (max-width:400px) {
+         .input-div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+            }
+    }
+    </style>
+
+    <script>
+
+function addItem(){
+    let inputField = document.getElementById('inputField').value;
+    let unOrderedList = document.getElementById('unOrderedList');
+
+
+    if (/\d+/.test(inputField)) {
+        confirm("Do you want to delete item? (Contains a digit)");
+        if (result==true) {
+           return true; } 
+        else {
+           return false; }
+    }else{
+        console.log('No number at all, carry on.')
+    }
+
+    while(inputField.includes(" ")) {
+        confirm("Do you want to delete item? (Contains spaces)");
+        if (result==true) {
+           return true; } 
+        else {
+           return false; }
+       // to remove the spaces but that's not our plan right now:  inputField = inputField.replace(" ", "");
+    }
+
+    var createAnItem = document.createElement('li');
+    createAnItem.classList.add("list-items");
+
+    var textFromUserInput = document.createTextNode(inputField);
+    createAnItem.appendChild(textFromUserInput);
+    unOrderedList.appendChild(createAnItem);
+}
+
+    </script>
+
+    </main>
+</body>
+</html>
