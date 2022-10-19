@@ -19,7 +19,7 @@
         <div class="container">
             <div class="input-div">
                  <input type="number" id="inputNumber" placeholder="INPUT A NUMBER...">
-                 <button id="checkButton" onclick="checkStatus()">SUBMIT</button>
+                 <button id="checkButton">SUBMIT</button>
             </div>
              <p id="result"></p>
         </div>
