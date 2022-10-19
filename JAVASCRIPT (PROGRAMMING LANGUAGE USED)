@@ -12,6 +12,7 @@
 <body>
     <header>
         <h1>@Kendra Danagogo Bestmann</h1>
+        <p>ANSWER TO QUESTION 3 IS; option 1. An algorithm is a well-defined set of instructions to solve a particular problem.</p>
     </header>
 
     <main>
@@ -35,6 +36,10 @@
         body{
     background-color: #ddd;
     }
+    
+      header{
+            padding: 10px 20px;
+        }
 
        .wrapper{
     display: flex;
@@ -111,6 +116,7 @@ checkButton.addEventListener('click', (e) =>{
         if(inputNumber%2!==0)
         result.innerHTML = "WEIRD!!(THIS IS AN ODD NUMBER)";
     }
+    console.log(result);
 }); 
     </script>
 
